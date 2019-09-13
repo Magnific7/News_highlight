@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..requests import get_sources
+from ..requests import get_sources,get_articles
 
 @main.route('/')
 def index():
@@ -15,5 +15,17 @@ def index():
     # sport_sources = get_sources('sport')
     entertainment_sources = get_sources('entertainment')
     technology_sources = get_sources('technology')
-    title = 'Home - Welcome to The best News Review Website Online'
+    title = 'Home - Welcome to The best News Website '
     return render_template('index.html', title = title, business_sources = business_sources, general_sources = general_sources, entertainment_sources = entertainment_sources, technology_sources = technology_sources )
+
+@main.route('/source/<id>')
+def article(id):
+	'''
+	View Function that returns the source page and its data
+	'''
+	articles = get_articles(id)
+	source_id = id.upper()
+	title = f'{source_id} - Top Articles'
+
+	return render_template('source.html',title=title,id=source_id, articles=articles)    
+

@@ -6,11 +6,13 @@ from .models import Sources
 api_key = None
 # Getting the source base url
 sources_base_url= None
+articles_base_url = None
 
 def configure_request(app):
     global api_key,sources_base_url
     api_key = app.config['NEWS_API_KEY']
     sources_base_url = app.config['SOURCES_BASE_URL']
+    articles_base_url = app.config['ARTICLES_BASE_URL']
 
 def get_sources(category):
 	'''
@@ -48,4 +50,22 @@ def process_sources(sources_results):
 		source_object = Sources(id,name,description,url,category)
 		sources_list.append(source_object)
 
-	return sources_list    
+	return sources_list  
+
+
+def get_articles(source):
+	'''
+	Function that gets the json response to our url request
+	'''
+	get_articles_url = articles_base_url.format(source,api_Key)
+
+	with urllib.request.urlopen(get_articles_url,data=None) as url:
+		get_articles_data = url.read()
+		get_articles_response = json.loads(get_articles_data)
+		articles_results = None
+
+		if get_articles_response['articles']:
+			articles_results_list = get_articles_response['articles']
+			articles_results = process_articles(articles_results_list)
+
+	return articles_results     

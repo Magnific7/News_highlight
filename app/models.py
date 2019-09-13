@@ -11,4 +11,4 @@ class Sources:
           self.description = description
           self.url = url
           self.category = category
-          
+# class Articles:
