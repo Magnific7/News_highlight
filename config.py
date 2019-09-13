@@ -1,9 +1,9 @@
 import os
 
 class Config:
-    SOURCES_BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
+    SOURCES_BASE_URL = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
     # ARTICLES_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
-    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+    NEWS_API_KEY = 'bab6df658196462084902b520b63891e'
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
 class ProdConfig(Config):

@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+<!-- {% import 'macros.html' as macro%} -->
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Welcome to the news field</title>
+    {% endif %}
+</head>
+<!-- <body> -->
+
+{% block content %}
+    <!-- sources section -->
+    <h3> Business news</h3>
+        <ul>
+            {% for business in business_sources %}
+            <li>{{ business.name}}</li>
+            {% endfor %}  
+        </ul>
+        <!-- general -->
+    <h3> General news</h3>
+        <ul>
+            {% for general in general_sources %}
+            <li>{{ general.name}}</li>
+            {% endfor %}
+        </ul>
+        <!-- sports -->
+        <!-- <h3> sports news</h3>
+        <ul>
+            {% for sports in sports_sources %}
+            <li>{{ sports.name}}</li>
+            {% endfor %}
+        </ul> -->
+        <!-- Upcoming movie  -->
+        <h3> entertainment news</h3>
+        <ul>
+            {% for entertainment in entertainment_sources %}
+            <li>{{ entertainment.name}}</li>
+            {% endfor %}
+        </ul>
+        <!-- technology -->
+        <h3> technology news</h3>
+        <ul>
+            {% for technology in technology_sources %}
+            <li>{{ technology.name}}</li>
+            {% endfor %}
+        </ul>
+        
+{% endblock%}
+<!-- 
+</body>
+</html> -->
