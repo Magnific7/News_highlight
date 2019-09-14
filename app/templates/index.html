@@ -16,7 +16,7 @@
 
 {% block content %}
 
-    <div>    <h3 id="business"> Business news</h3>
+    <div>   <span style="color:white"> <h3 id="business"> Business news</h3></span>
         <ul>
             {% for business in business_sources %}
             <!-- <li>{{ business.name}}</li> -->
@@ -27,7 +27,7 @@
 
         <!-- general -->
     <div id="general">    
-    <h3> General news</h3>
+    <h3><span style="color:white"> <h3 id="business"> General news</h3></span></h3>
         <ul>
             {% for general in general_sources %}
             <li><a a href="/source/{{general.id}}">{{ general.name}}</a></li>
@@ -44,7 +44,7 @@
         </ul> -->
         <!-- Upcoming movie  -->
         <div>
-        <h3 id="entertainment"> entertainment news</h3>
+        <h3 id="entertainment"> <span style="color:white"> <h3 id="business"> entertainment news</h3></span></h3>
         <ul>
             {% for entertainment in entertainment_sources %}
             <li><a a href="/source/{{entertainment.id}}">{{ entertainment.name}}</a></li>
@@ -53,7 +53,7 @@
     </div>
         <!-- technology -->
         <div>
-        <h3 id="technology"> technology news</h3>
+        <h3 id="technology"> <span style="color:white"> <h3 id="business"> Technology news</h3></span></h3>
         <ul>
             {% for technology in technology_sources %}
             <li><a a href="/source/{{technology.id}}">{{ technology.name}}</a></li>
