@@ -1,7 +1,5 @@
 {% extends 'base.html'%}
-<!-- {% import 'macros.html' as macro%} -->
-<!-- <!DOCTYPE html>
-<html lang="en"> -->
+
 <head>
     <meta charset="UTF-8">
     {% if title %}
@@ -13,20 +11,38 @@
 <!-- <body> -->
 
 {% block content %}
+<div class="navbar navbar-light" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="padding-left:30%">
+                    <li><a href="#general">General</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#entertainment">Entertainment</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- sources section -->
-    <h3> Business news</h3>
+    <div>    <h3 id="business"> Business news</h3>
         <ul>
             {% for business in business_sources %}
-            <li>{{ business.name}}</li>
+            <!-- <li>{{ business.name}}</li> -->
+            <li><a a href="/source/{{business.id}}">{{ business.name}}</a></li>
             {% endfor %}  
         </ul>
+    </div>
+
         <!-- general -->
+    <div id="general">    
     <h3> General news</h3>
         <ul>
             {% for general in general_sources %}
-            <li>{{ general.name}}</li>
+            <li><a a href="/source/{{general.id}}">{{ general.name}}</a></li>
+
             {% endfor %}
         </ul>
+    </div>
         <!-- sports -->
         <!-- <h3> sports news</h3>
         <ul>
@@ -35,21 +51,26 @@
             {% endfor %}
         </ul> -->
         <!-- Upcoming movie  -->
-        <h3> entertainment news</h3>
+        <div>
+        <h3 id="entertainment"> entertainment news</h3>
         <ul>
             {% for entertainment in entertainment_sources %}
-            <li>{{ entertainment.name}}</li>
+            <li><a a href="/source/{{entertainment.id}}">{{ entertainment.name}}</a></li>
             {% endfor %}
         </ul>
+    </div>
         <!-- technology -->
-        <h3> technology news</h3>
+        <div>
+        <h3 id="technology"> technology news</h3>
         <ul>
             {% for technology in technology_sources %}
-            <li>{{ technology.name}}</li>
+            <li><a a href="/source/{{technology.id}}">{{ technology.name}}</a></li>
             {% endfor %}
         </ul>
-        
+    </div>
+    
 {% endblock%}
+
 <!-- 
 </body>
 </html> -->

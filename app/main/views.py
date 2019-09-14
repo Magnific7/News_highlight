@@ -24,8 +24,8 @@ def article(id):
 	View Function that returns the source page and its data
 	'''
 	articles = get_articles(id)
-	source_id = id.upper()
-	title = f'{source_id} - Top Articles'
+    # sources = get_sources(id)
+	title = f'Top Articles'
 
-	return render_template('source.html',title=title,id=source_id, articles=articles)    
+	return render_template('source.html',title=title,articles = articles)    
 
