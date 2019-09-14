@@ -9,21 +9,13 @@
     {% endif %}
 </head>
 <!-- <body> -->
+    {% block styles%}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    {% endblock %}
 
 {% block content %}
-<div class="navbar navbar-light" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" style="padding-left:30%">
-                    <li><a href="#general">General</a></li>
-                    <li><a href="#business">Business</a></li>
-                    <li><a href="#entertainment">Entertainment</a></li>
-                    <li><a href="#technology">Technology</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- sources section -->
+
     <div>    <h3 id="business"> Business news</h3>
         <ul>
             {% for business in business_sources %}

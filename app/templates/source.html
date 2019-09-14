@@ -8,9 +8,15 @@
         {% endif %}
     </head>
 <!-- Content block -->
+<!-- - <body> --> -->
+        {% block styles%}
+            {{ super() }}
+            <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock %}
+    
 {% block content%}
 
-<div>
+<div class="source">
     {% for article in articles %}
     <img src="{{article.image}}" alt="{{article.title}}" style="width: 60%; height: 60%">
     <a target="_blank" href="{{article.url}}">
