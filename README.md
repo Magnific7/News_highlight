@@ -28,3 +28,4 @@ You need the following to start working on the project on your local computer:
 
 ```
 -Python version 3.6
+-Flask
