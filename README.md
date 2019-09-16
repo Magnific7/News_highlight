@@ -55,3 +55,9 @@ export NEWS_API_KEY='<Your-Api-Key>'
 * Python v3.6
 * Boostrap
 * Flask
+
+## License
+
+MIT License
+
+Copyright (c) 2019 UM MAGNIFIC
