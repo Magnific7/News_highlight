@@ -23,3 +23,4 @@ With the application, a user will be able to:
 | Read an entire article | **Click an article** | Redirected to the news source's site to read the entire article |
 
 ### Prerequisites
+You need the following to start working on the project on your local computer:
