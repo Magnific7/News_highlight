@@ -1,7 +1,9 @@
 import unittest
 import sys
 sys.path.append('./app')
-from models import Article
+from app.models import Article
+
+# Article = article.Article
 
 class TestArticle(unittest.TestCase):
 	'''
