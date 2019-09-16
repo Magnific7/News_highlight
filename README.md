@@ -18,3 +18,4 @@ With the application, a user will be able to:
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
 | Display news sources | **On page load** | List of various news sources is displayed per category |
+| Display articles from a news source | **Click a news source** | Redirected to a page with a list of articles from the source |
