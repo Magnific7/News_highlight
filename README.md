@@ -10,3 +10,4 @@ With the application, a user will be able to:
 * See various news sources and select the ones they prefer.
 * See all news sources from the source they selected.
 * See Image description and time the news article was created.
+* See Image description and time the news article was created.
