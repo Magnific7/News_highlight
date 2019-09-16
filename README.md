@@ -33,3 +33,13 @@ You need the following to start working on the project on your local computer:
 -virtualenv
 -A text  Editor
 ```
+
+## Getting Started
+
+* Clone this repository to your local computer.
+* Ensure you have python3.6 installed in your computer.
+* From the terminal navigate to the cloned project folder.
+* Create a virtual environment and access the folder via your virtual amchine.
+* Visit https://newsapi.org/ and register for an API key.
+* Create start.sh file and in it write the following lines:
+```
