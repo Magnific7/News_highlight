@@ -14,3 +14,5 @@ With the application, a user will be able to:
 
 
 ## Specifications
+
+| Behaviour | Input | Output |
